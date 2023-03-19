@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div::after {
+			font-size: 3rem;
+			font-weight: bold;
+		}
+		body {
+			background-color: chartreuse;
+		}
+		@media screen and (orientation: landscape) {
+			body {
+				background-color: whitesmoke;
+			}
+		}
+		@media screen and (orientation: portrait) {
+			body {
+				background-color: black;
+			}
+		}
+		@media screen and (max-width: 767px) {
+			div::after {
+				content: "XS < 767px";
+				font-size: 3rem;
+			}
+			body {
+				background-color: white;
+			}
+		}
+		@media (min-width: 768px) {
+			div::after {
+				content: "SM > 768px";
+				font-size: 4rem;
+			}
+			body {
+				background-color: mistyrose;
+			}
+		}
+		@media (min-width: 991px)  {
+			div::after {
+				content: "MD > 991px";
+				font-size: 6rem;
+			}
+			body {
+				background-color: red;
+			}
+		}
+		@media (min-width: 1200px){
+			div::after {
+				content: "LG > 1200px";
+				font-size: 10rem;
+			}
+			body {
+				background-color: yellow;
+			}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

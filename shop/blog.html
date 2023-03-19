@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+	.blog {
+	background-color: var(--bg-primary-700);
+	border-radius: 10px;
+	color: white; }
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="shop"><a href="shop.html">Shop</a></li>
+				<li class="blog">Blog</li>
+				<li class="about"><a href="about.html">About</a></li>
+			</ul>
+		</nav>
+		<div class="logo">VINEBOOM</div>
+		<div id="cart">Корзина</div>
+	</header>
+	<main>
+		<div class="grid2">
+			<div class="desc-container">
+				<h2>VINEBOOM BLOG</h2>
+				<h3>fancy blog about 100$ cases</h3>
+			</div>
+
+			<div class="post-container">
+				<div class="post-card">
+					<div class="post-image">
+						<img src="https://images.unsplash.com/photo-1544449566-dee13645ade8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTR8Njc3OTIwN3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
+					</div>
+					<div class="post-info">
+						<h3>POST NUMBR 1</h3>
+						<h4>Lore 1 ipsum dolor sit amet consectetur adipisicing elit. Ut, doloribus, voluptate facere tenetur commodi soluta ea enim sed aspernatur quisquam fuga officiis</h4>
+						<div class="post-price">
+							<span>01/01/23</span>
+							<span>link</span>
+						</div>
+					</div>
+				</div>
+				<div class="post-card">
+					<div class="post-image">
+						<img src="https://images.unsplash.com/photo-1544449566-dee13645ade8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTR8Njc3OTIwN3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
+					</div>
+					<div class="post-info">
+						<h3>POST NUMBR 2<</h3>
+						<h4>Lore 2 ipsum dolor sit amet consectetur adipisicing elit. Ut, doloribus, voluptate facere tenetur commodi soluta ea enim sed aspernatur quisquam fuga officiis</h4>
+						<div class="post-price">
+							<span>01/01/23</span>
+							<span>link</span>
+						</div>
+					</div>
+				</div>
+					<div class="sidebar sidebar_hidden">
+		<span id="close">x</span>
+		<ul>
+			<li>
+				<h3>Name</h3>
+				<div>
+					<p>5</p>
+					<p>100$</p>
+				</div>
+			</li>
+		</ul>
+		<form method="POST" action="https://formspree.io/f/xwkjqbnb">
+			<input type="email" name="email">
+			<button id="buy" type="submit">купить</button>
+		</form>
+	</div>
+					<script>
+		let sidebar = document.querySelector(".sidebar")
+		let close = document.querySelector("#close")
+		let buy = document.querySelector("#buy")
+		let cart = document.querySelector("#cart")
+
+		let opened = false
+		cart.addEventListener('click', ()=>{
+			if(!opened){
+				opened=true
+				sidebar.classList.toggle("sidebar_hidden")
+			} else {
+				opened=false
+				sidebar.classList.toggle("sidebar_hidden")
+			}
+
+		})
+		close.addEventListener('click', ()=>{
+				opened=false
+				sidebar.classList.toggle("sidebar_hidden")
+			})
+	</script>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

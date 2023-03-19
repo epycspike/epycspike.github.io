@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+	.about {
+	background-color: var(--bg-primary-700);
+	border-radius: 10px;
+	color: white; }
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="shop"><a href="shop.html">Shop</a></li>
+				<li class="blog"><a href="blog.html">Blog</a></li>
+				<li class="about">About</li>
+			</ul>
+			</nav>
+		<div class="logo">VINEBOOM</div>
+		<div id="cart">Корзина</div>
+	</header>
+		<div class="sidebar sidebar_hidden">
+		<span id="close">x</span>
+		<ul>
+			<li>
+				<h3>Name</h3>
+				<div>
+					<p>5</p>
+					<p>100$</p>
+				</div>
+			</li>
+		</ul>
+		<form method="POST" action="https://formspree.io/f/xwkjqbnb">
+			<input type="email" name="email">
+			<button id="buy" type="submit">купить</button>
+		</form>
+	</div>
+		<script>
+		let sidebar = document.querySelector(".sidebar")
+		let close = document.querySelector("#close")
+		let buy = document.querySelector("#buy")
+		let cart = document.querySelector("#cart")
+
+		let opened = false
+		cart.addEventListener('click', ()=>{
+			if(!opened){
+				opened=true
+				sidebar.classList.toggle("sidebar_hidden")
+			} else {
+				opened=false
+				sidebar.classList.toggle("sidebar_hidden")
+			}
+
+		})
+		close.addEventListener('click', ()=>{
+				opened=false
+				sidebar.classList.toggle("sidebar_hidden")
+			})
+	</script>
+</body>
+</html>
